@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Django</title>
+<head><h1>Deploy Machine Learning Model Using Django Framework</h1></head>
+<body>
+
+    <form action="{% url 'result'%}">
+        {% csrf_token %}
+        
+        <h3>Summary: using red wine datasets, we use Random Forest to predict the quality of wine, the main focus is to build ML in Django hence please dont judge me if the model is inefficient, I just use 
+            simple train_test_split and RFC() without fine-tuning anything
+        </h3>
+        fixed acidity:       <input type="text" required name="FA"><br><br>
+        volatile acidity:    <input type="text" required name="VA"><br><br>
+        citric acid:         <input type="text" required name="CA"><br><br>
+        residual sugar:      <input type="text" required name="RS"><br><br>
+        chlorides:           <input type="text" required name="C"><br><br>
+        free sulfur dioxide: <input type="text" required name="FSD"><br><br>
+        total sulfur dioxide:<input type="text" required name="TSD"><br><br>
+        density:             <input type="text" required name="D"><br><br>
+        pH:                  <input type="text" required name="PH"><br><br>
+        sulphates:           <input type="text" required name="S"><br><br>
+        alcohol:             <input type="text" required name="A"><br><br>
+        <input type="submit" name="" value="submit">
+        
+        <br>
+        <br>
+        datasets: https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009
+
+        
+
+    </form>
+</body>
+
+</html>
